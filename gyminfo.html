@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitZone</title>
+    <link rel="stylesheet" href="gym.css">
+    <script src="gym.js" defer></script>   
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Catamaran:wght@200&family=Courgette&family=Edu+TAS+Beginner:wght@700&family=Lato:wght@300;900&family=Mukta:wght@700&family=Mulish:wght@300&family=Open+Sans&family=PT+Sans:ital,wght@1,700&family=Poppins:wght@300&family=Raleway:wght@100&family=Roboto&family=Roboto+Condensed:wght@700&family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+    <title>Gym Timings</title>
+    
+</head>
+<body>
+  <div class="container">
+    <nav>
+        <div class="logo">
+            <h1>Fit Zone</h1>
+        </div>
+        <ul>
+            <li>
+                <a href="index.html">HOME</a>
+                <a href="gymplans.html">PLANS</a>
+                <a href="gyminfo.html" >INFO</a>
+                <button>Join Now</button>
+
+            </li>
+        </ul>
+    </nav>
+
+
+  <div class="container2">
+      <table id="timingsTable">
+        <h1>Timings</h1>
+          <thead>
+              <tr>
+                  <th>Day</th>
+                  <th>Opening Time</th>
+                  <th>Closing Time</th>
+              </tr>
+          </thead>
+          <tbody>
+              <!-- Table content -->
+          </tbody>
+      </table>
+  </div>
+
+  <script>
+      // Gym timings data
+      const timings = [
+          { day: "Monday", opening: "08:00 AM", closing: "10:00 PM" },
+          { day: "Tuesday", opening: "08:00 AM", closing: "10:00 PM" },
+          { day: "Wednesday", opening: "08:00 AM", closing: "10:00 PM" },
+          { day: "Thursday", opening: "08:00 AM", closing: "10:00 PM" },
+          { day: "Friday", opening: "08:00 AM", closing: "10:00 PM" },
+          { day: "Saturday", opening: "10:00 AM", closing: "08:00 PM" },
+          { day: "Sunday", opening: "10:00 AM", closing: "08:00 PM" }
+      ];
+
+      // Function to generate the table content
+      function generateTimingsTable() {
+          const tbody = document.querySelector("#timingsTable tbody");
+
+          timings.forEach(day => {
+              const row = document.createElement("tr");
+              row.innerHTML = `
+                  <td>${day.day}</td>
+                  <td>${day.opening}</td>
+                  <td>${day.closing}</td>
+              `;
+              tbody.appendChild(row);
+          });
+      }
+    
+      window.onload = generateTimingsTable;
+  </script>
+
+<div class="footer" >
+  <div class="footerText">
+      <h2>Address</h2>
+      <p>Hoyt St Building One<br>
+        2 St, 5th Ave, Brooklyn, NewYork </p>
+  </div>
+  
+  <div class="footerText">
+      <h2>Contact US</h2>
+      <p>111-222-333</p>
+      <p>fitzone@gmail.com</p>
+      <p>fitzone@yahoo.com</p>
+      <p>Join Now</p>
+  </div>
+</div>
+</div>
+
+</body>
+</html>
